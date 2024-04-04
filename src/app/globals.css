@@ -34,10 +34,7 @@ body {
   font-family: Nunito, sans-serif;
   font-size: 14px;
   color: #555;
-  background:
-    /* $background-color */
-    white;
-  /* Replace 'white' with the actual value of $background-color */
+  background: #f2f3f5;
   padding: 0;
   margin: 0;
 }
@@ -48,9 +45,7 @@ body {
 
 ::placeholder {
   color:
-    /* $placeholder-color */
-    #ccc;
-  /* Replace '#ccc' with the actual value of $placeholder-color */
+    #aaa;
   opacity: 1;
 }
 
@@ -85,10 +80,7 @@ button.link {
   align-items: center;
   background: transparent;
   border: 0;
-  color:
-    /* $color-blue */
-    blue;
-  /* Replace 'blue' with the actual value of $color-blue */
+  color: #428bca;
 }
 
 button.link:hover,
@@ -97,10 +89,7 @@ button.link:focus {
 }
 
 button.link:focus {
-  outline: 1px dotted
-    /* $color-cyan */
-    cyan;
-  /* Replace 'cyan' with the actual value of $color-cyan */
+  outline: 1px dotted #66afe9;
   opacity: 1;
 }
 
@@ -130,18 +119,12 @@ h1 {
 .input:focus,
 .select:hover,
 .select:focus {
-  background:
-    /* $color-yellow */
-    yellow;
-  /* Replace 'yellow' with the actual value of $color-yellow */
+  background: #fdf4db;
 }
 
 .input:focus,
 .select:focus {
-  border-color:
-    /* $color-cyan */
-    cyan;
-  /* Replace 'cyan' with the actual value of $color-cyan */
+  border-color: #66afe9;
 }
 
 .input.white:hover,
@@ -200,17 +183,10 @@ h1 {
 .image__upload {
   cursor: pointer;
   font-size: 12px;
-  color:
-    /* $placeholder-color */
-    #ccc;
-  /* Replace '#ccc' with the actual value of $placeholder-color */
-  background-color:
-    /* $color-gray */
-    gray;
-  /* Replace 'gray' with the actual value of $color-gray */
-  border: 2px dashed
-    /* $placeholder-color */
-    #ccc;
+  color: #aaa;
+  background-color: #e3e3e3;
+
+  border: 2px dashed#aaa;
   display: block;
   width: 100px;
   height: 20px;
@@ -233,14 +209,9 @@ h1 {
   cursor: pointer;
   font-size: 14px;
   color:
-    /* $placeholder-color */
-    #ccc;
-  background-color:
-    /* $color-gray */
-    gray;
-  border: 2px dashed
-    /* $placeholder-color */
-    #ccc;
+    #aaa;
+  background-color: #e3e3e3;
+  border: 2px dashed #aaa;
   position: absolute;
   top: 0;
   left: 0;
@@ -289,10 +260,7 @@ h1 {
 }
 
 .image__width-wrapper {
-  background-color:
-    /* $color-white */
-    white;
-  /* Replace 'white' with the actual value of $color-white */
+  background-color: white;
   padding: 10px 20px 25px;
   position: absolute;
   width: 270px;
@@ -323,10 +291,7 @@ h1 {
   height: 10px;
   left: 7px;
   top: 3px;
-  background-color:
-    /* $color-white */
-    white;
-  /* Replace 'white' with the actual value of $color-white */
+  background-color: white;
 }
 
 .icon-remove::before {
@@ -345,10 +310,7 @@ h1 {
   height: 10px;
   left: 7px;
   top: 3px;
-  background-color:
-    /* $color-white */
-    white;
-  /* Again, replace 'white' with the actual value of $color-white */
+  background-color: white;
 }
 
 .icon-add::after {
@@ -450,6 +412,7 @@ h1 {
 .ml-30 {
   margin-left: 30px;
 }
+
 
 .p-4-8 {
   padding: 4px 8px;
