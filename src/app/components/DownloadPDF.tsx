@@ -25,7 +25,7 @@ const Download: FC<Props> = ({ data }) => {
       {show && (
         <PDFDownloadLink
           document={<InvoicePage pdfMode={true} data={data} />}
-          fileName={`${data.invoiceTitle ? data.invoiceTitle.toLowerCase() : 'invoice'}.pdf`}
+          fileName={`${data.billTo ? `${data.billTo.toLowerCase()}-invoice` : 'invoice'}.pdf`}
           aria-label="Save PDF"
         ></PDFDownloadLink>
       )}

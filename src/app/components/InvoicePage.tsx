@@ -46,18 +46,29 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
   }
 
   const handleChange = (name: keyof Invoice, value: string | number) => {
-    if (name !== 'productLines') {
-      const newInvoice = { ...invoice }
+    // Early return if productLines is being modified, which we don't handle here
+    if (name === 'productLines') return;
 
-      if (name === 'logoWidth' && typeof value === 'number') {
-        newInvoice[name] = value
-      } else if (name !== 'logoWidth' && typeof value === 'string') {
-        newInvoice[name] = value
+    // Create a new copy of the invoice
+    const newInvoice: Partial<Invoice> = { ...invoice };
+
+    // Handle numeric fields
+    if (name === 'logoWidth' || name === 'signatureWidth') {
+      if (typeof value === 'number') {
+        // Direct assignment for number values
+        newInvoice[name] = value;
       }
-
-      setInvoice(newInvoice)
+    } else {
+      // Handle string fields with a type guard
+      if (typeof value === 'string') {
+        // Assuming all other fields can safely accept strings
+        newInvoice[name] = value;
+      }
     }
-  }
+
+    // Update the invoice state
+    setInvoice(newInvoice as Invoice); // Cast back to Invoice when we're done
+  };
 
   const handleProductLineChange = (index: number, name: keyof ProductLine, value: string) => {
     const productLines = invoice.productLines.map((productLine, i) => {
