@@ -156,7 +156,7 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
           </View>
         </View>
 
-        <View className="flex mt-40 border" pdfMode={pdfMode}>
+        <View className="flex mt-40" pdfMode={pdfMode}>
           {/* Client Info */}
           <View className="w-33" pdfMode={pdfMode}>
             <EditableInput
