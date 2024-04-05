@@ -14,6 +14,7 @@ import Text from './Text'
 import { Font } from '@react-pdf/renderer'
 import Download from './DownloadPDF'
 import { format } from 'date-fns';
+import { numberToWords } from '../functions/numberToWords'
 
 Font.register({
   family: 'Nunito',
@@ -401,20 +402,26 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
         </View>
 
         <View className="mt-20" pdfMode={pdfMode}>
-          <EditableInput
-            className="bold w-100"
-            value={invoice.notesLabel}
-            onChange={(value) => handleChange('notesLabel', value)}
-            pdfMode={pdfMode}
-          />
-          <EditableTextarea
-            className="w-100"
-            rows={2}
-            value={invoice.notes}
-            onChange={(value) => handleChange('notes', value)}
-            pdfMode={pdfMode}
-          />
+          <Text className="bold dark" pdfMode={pdfMode}>
+            I, THE UNDERSIGNED DR. LINA CHAMSEDDINE HAVE RECEIVED THE TOTAL AMOUNT OF {numberToWords(subTotal ?? 0)} DOLLARS US CASH.
+          </Text>
+          <View className='flex justify-end w-full' pdfMode={pdfMode}>
+            <EditableFileImage
+              className="logo"
+              placeholder="Your Signature"
+              value={invoice.signature}
+              width={invoice.signatureWidth}
+              pdfMode={pdfMode}
+              onChangeImage={(value) => handleChange('signature', value)}
+              onChangeWidth={(value) => handleChange('signatureWidth', value)}
+            />
+          </View>
         </View>
+
+
+
+
+
       </Page>
     </Document>
   )

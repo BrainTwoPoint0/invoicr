@@ -9,6 +9,8 @@ export const initialProductLine: ProductLine = {
 export const initialInvoice: Invoice = {
   logo: '/logo_example.png',
   logoWidth: 100,
+  signature: '/signature_example.png',
+  signatureWidth: 150,
   title: 'DENTAL INVOICE',
   name: 'Dr. Lina Chamseddine',
   companyAddress: 'Bechara El Khoury av.',

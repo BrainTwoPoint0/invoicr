@@ -9,6 +9,10 @@ export interface ProductLine {
 export interface Invoice {
   logo: string
   logoWidth: number
+
+  signature: string
+  signatureWidth: number
+
   title: string
   name: string
   companyAddress: string

@@ -28,6 +28,10 @@ const styles: CSSClasses = {
     flexWrap: 'nowrap',
   },
 
+  'justify-end': {
+    justifyContent: 'flex-end',
+  },
+
   'w-auto': {
     flex: 1,
     paddingRight: '8px',
@@ -141,6 +145,7 @@ const styles: CSSClasses = {
   logo: {
     display: 'block',
   }
+
 }
 
 export default styles
