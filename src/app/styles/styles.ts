@@ -60,7 +60,9 @@ const styles: CSSClasses = {
   'w-40': {
     width: '40%',
   },
-
+  'w-33': {
+    width: '33%',
+  },
   'w-48': {
     width: '48%',
   },
