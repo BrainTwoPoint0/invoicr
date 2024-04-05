@@ -142,8 +142,8 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
 
   return (
     <Document pdfMode={pdfMode}>
+      {!pdfMode && <Download data={invoice} />}
       <Page className="invoice-wrapper" pdfMode={pdfMode}>
-        {!pdfMode && <Download data={invoice} />}
 
         <View className="flex" pdfMode={pdfMode}>
           <View className="w-33" pdfMode={pdfMode}>

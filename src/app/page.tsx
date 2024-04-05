@@ -30,7 +30,7 @@ export default function Home() {
   // };
   return (
     <main className="mt-8 mb-12 mx-auto w-[700px]">
-      <h1 className="text-3xl text-center font-bold mb-20">HAPPY BIRTHDAY MOM</h1>
+      <h1 className="text-3xl text-center font-bold mb-4">HAPPY BIRTHDAY MOM</h1>
       <InvoicePage />
       {/* <InvoicePage data={data} onChange={onInvoiceUpdated} /> */}
     </main>
